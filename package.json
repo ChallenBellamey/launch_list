@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.1.10",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js src/**/*.tsx"
   },
   "eslintConfig": {
     "extends": [
@@ -25,6 +25,7 @@
       "react-app/jest"
     ]
   },
+  "eslintIgnore": ["*.test.tsx"],
   "browserslist": {
     "production": [
       ">0.2%",

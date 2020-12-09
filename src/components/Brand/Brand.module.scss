@@ -1,0 +1,28 @@
+@import "_mixins";
+@import "_variables";
+
+.container {
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    height: 31px;
+    width: 280px;
+}
+
+.spaceXLogo {
+    position: absolute;
+    top: 0.7px;
+    left: 0.92px;
+    height: 22px;
+}
+
+.title {
+    position: absolute;
+    top: 1.19px;
+    right: 0.33px;
+    width: 115px;
+    color: $font-color;
+    font-family: "Regular";
+    font-size: 20px;
+    text-transform: uppercase;
+}
