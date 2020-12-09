@@ -1,0 +1,30 @@
+@mixin BrandonGrotesque ($type, $fontWeight, $fontStyle) {
+    @font-face {
+        font-family: $type;
+        src: url('assets/font/BrandonGrotesque-#{$type}.woff2') format('woff2');
+        src: url('assets/font/BrandonGrotesque-#{$type}.woff') format('woff');
+        src: url('assets/font/BrandonGrotesque-#{$type}.ttf') format('truetype');
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+    }
+}
+
+@mixin BrandonGrotesqueBold {
+    @include BrandonGrotesque("Bold", bold, normal);
+}
+
+@mixin BrandonGrotesqueRegular {
+    @include BrandonGrotesque("Regular", normal, normal);
+}
+
+@mixin BrandonGrotesqueRegularItalic {
+    @include BrandonGrotesque("RegularItalic", normal, italic);
+}
+
+@mixin BrandonGrotesqueBlack {
+    @include BrandonGrotesque("Black", 900, normal);
+}
+
+@mixin BrandonGrotesqueMedium {
+    @include BrandonGrotesque("Medium", 500, normal);
+}
