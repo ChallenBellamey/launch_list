@@ -19,7 +19,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-extra-parens": ["error", "all", { "ignoreJSX": "multi-line" }]
+        "no-extra-parens": ["error", "all", { "ignoreJSX": "multi-line" }],
+        "no-undef": "off"
     },
     "settings": {
         "react": {

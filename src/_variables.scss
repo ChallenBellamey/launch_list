@@ -1,7 +1,8 @@
 @import "./mixins";
 
 $primary-blue: #215184;
-$font-color: #545454;
+$font-color-grey: #545454;
+$font-color-white: #FFF;
 
 @include BrandonGrotesqueBold();
 @include BrandonGrotesqueRegular();

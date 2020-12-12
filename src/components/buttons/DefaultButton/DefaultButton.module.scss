@@ -1,0 +1,15 @@
+@import "_variables";
+
+.button {
+    height: 43px;
+    border: 0;
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $primary-blue;
+    color: $font-color-white;
+    font-family: "Bold";
+    font-size: 16px;
+    cursor: pointer;
+}
