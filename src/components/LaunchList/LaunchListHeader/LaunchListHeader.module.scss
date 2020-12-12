@@ -1,0 +1,11 @@
+@import "_variables";
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button:not(:first-child) {
+    margin-left: 9px;
+}

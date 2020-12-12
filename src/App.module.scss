@@ -4,6 +4,13 @@
     left: 40px;
 }
 
+.launchList {
+    position: absolute;
+    top: 119px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .reloadButton {
     position: absolute;
     top: 24px;

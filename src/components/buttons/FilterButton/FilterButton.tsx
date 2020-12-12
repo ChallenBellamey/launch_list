@@ -1,34 +1,34 @@
 import React from "react";
 import classNames from "classnames";
 import { DefaultButton } from "components/";
-import refreshIcon from "assets/icon/refresh@3x.png";
+import selectIcon from "assets/icon/select@3x.png";
 
-import styles from "./ReloadButton.module.scss";
+import styles from "./FilterButton.module.scss";
 
 interface Props {
     className?: string;
     [key: string]: any;
 }
 
-const ReloadButton = ({ className, ...props }: Props) => {
+const FilterButton = ({ className, ...props }: Props) => {
     const buttonClasses = classNames(styles.button, className);
 
     return (
         <DefaultButton
-            aria-label="Reload Data"
+            aria-label="Filter by Year"
             className={buttonClasses}
             icon={(
                 <img
                     alt="refresh"
                     className={styles.icon}
                     data-testid="icon"
-                    src={refreshIcon}
+                    src={selectIcon}
                 />
             )}
-            text="Reload Data"
+            text="Filter by Year"
             {...props}
         />
     );
 };
 
-export default ReloadButton;
+export default FilterButton;
