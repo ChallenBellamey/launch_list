@@ -1,13 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import { getLaunches, getRockets } from "lib/";
-
-import reducer, {
-    initialAppState,
-    Launch,
-    Rocket,
-    RocketNames,
-    State
-} from "./reducer";
+import reducer, { initialAppState } from "./reducer";
 
 export const AppContext = React.createContext({});
 
