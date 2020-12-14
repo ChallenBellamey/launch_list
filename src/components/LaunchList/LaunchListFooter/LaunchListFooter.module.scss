@@ -1,0 +1,13 @@
+@import "_variables";
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingIcon {
+    height: 43px;
+    filter: grayscale(1.0);
+}

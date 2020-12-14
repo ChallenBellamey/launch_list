@@ -24,6 +24,7 @@ declare interface RocketNames {
 }
 
 declare interface State {
+    batches?: number
     launches?: Array<Launch>
     page?: number
     rocketNames?: RocketNames

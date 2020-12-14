@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { useAppContext } from "context/";
 import LaunchListHeader from "./LaunchListHeader/LaunchListHeader";
 import LaunchListItem from "./LaunchListItem/LaunchListItem";
+import LaunchListFooter from "./LaunchListFooter/LaunchListFooter";
 
 import styles from "./LaunchList.module.scss";
 
@@ -21,6 +22,7 @@ const LaunchList = ({ className, ...props }: Props) => {
             {launches?.map((launch: Launch) => {
                 return <LaunchListItem launch={launch} />;
             })}
+            <LaunchListFooter className={styles.footer} />
         </div>
     );
 };

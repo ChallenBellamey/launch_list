@@ -8,6 +8,7 @@ type Action =
     |   ActionWithoutType
 
 export const initialAppState: State = {
+    batches: 0,
     launches: [],
     page: 1,
     sort: "asc"
