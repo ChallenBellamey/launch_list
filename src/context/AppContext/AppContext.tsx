@@ -12,7 +12,7 @@ interface Props {
 
 export const AppProvider = ({ children }: Props): JSX.Element => {
     const [appState, dispatchApp] = useReducer(reducer, initialAppState);
-    const { batches, launches, page, rocketNames } = appState;
+    const { batches, launches, page, rocketNames, sort } = appState;
     const setState = (state: State) => dispatchApp({ payload: state });
 
     const addLaunches = async () => {
@@ -20,7 +20,7 @@ export const AppProvider = ({ children }: Props): JSX.Element => {
             return;
         }
 
-        const newLaunches = await getLaunches(page);
+        const newLaunches = await getLaunches(page, sort);
 
         newLaunches.forEach((launch: Launch) => {
             launch.rocket = rocketNames[launch.rocket];
@@ -59,13 +59,15 @@ export const AppProvider = ({ children }: Props): JSX.Element => {
     };
 
     useEffect(() => {
+        resetApp();
+    }, [sort]);
+
+    useEffect(() => {
         const hasReset = !rocketNames;
 
         const hasScrolled = typeof batches === "number" && launches && page
             ? batches < page
             : null;
-
-        console.log(rocketNames, batches, launches, page); //eslint-disable-line
 
         if (hasReset) {
             setRocketNames();

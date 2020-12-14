@@ -1,7 +1,8 @@
 import React from "react";
-import { getNodeText, render, within } from "@testing-library/react";
+import { fireEvent, getNodeText, render, within } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
 import _ from "lodash";
+import { AppProvider } from "context/AppContext/AppContext";
 import SortButton from "./SortButton";
 
 describe("Renders", () => {
@@ -23,13 +24,39 @@ describe("Renders", () => {
     
         expect(icon).toBeTruthy();
     });
-    
+});
+
+describe("Context", () => {
     it("renders text correctly", () => {
-        const { queryByTestId } = render(<SortButton />);
+        const { queryByTestId } = render((
+            <AppProvider>
+                <SortButton />
+            </AppProvider>
+        ));
+
         const button = queryByTestId("button");
         let text: (string | null) = null;
 
         if (button) {
+            text = getNodeText(button);
+        }
+    
+        expect(text).toBeTruthy();
+        expect(text).toEqual("Sort Ascending");
+    });
+    
+    it("changes sort on click", () => {
+        const { queryByTestId } = render((
+            <AppProvider>
+                <SortButton />
+            </AppProvider>
+        ));
+
+        const button = queryByTestId("button");
+        let text: (string | null) = null;
+
+        if (button) {
+            fireEvent.click(button);
             text = getNodeText(button);
         }
     

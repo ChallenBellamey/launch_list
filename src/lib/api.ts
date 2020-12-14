@@ -34,7 +34,7 @@ export const getRockets = async () => {
 
 export const getLaunches = async (
     page: number,
-    sort: ("asc" | "desc") = "asc"
+    sort: ("ascending" | "descending") = "ascending"
 ) => {
     return api.post(
         "launches/query",

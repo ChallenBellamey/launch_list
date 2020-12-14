@@ -28,5 +28,5 @@ declare interface State {
     launches?: Array<Launch>
     page?: number
     rocketNames?: RocketNames
-    sort?: ("asc" | "desc")
+    sort?: ("ascending" | "descending")
 }
