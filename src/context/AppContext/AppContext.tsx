@@ -2,7 +2,9 @@ import React, { useEffect, useReducer } from "react";
 import { getLaunches, getRockets } from "lib/";
 import reducer, { initialAppState } from "./reducer";
 
-export const AppContext = React.createContext({});
+export const AppContext = React.createContext<Context>({
+    appState: initialAppState
+});
 
 interface Props {
     children: JSX.Element

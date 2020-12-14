@@ -1,0 +1,50 @@
+@import "_variables";
+
+.container {
+    position: relative;
+    height: 81px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 8px;
+    
+    > * {
+        color: $font-color-grey;
+        pointer-events: none;
+    }
+}
+
+.flightNumber {
+    position: absolute;
+    top: 14.37px;
+    left: 32px;
+    height: 48px;
+    font-family: "Medium";
+    font-size: 40px;
+}
+
+.name {
+    position: absolute;
+    top: 17.56px;
+    left: 132px;
+    font-family: "Medium";
+    font-size: 32px;
+}
+
+.date {
+    position: absolute;
+    top: 12.15px;
+    right: 16px;
+    height: 19px;
+    font-family: "Regular";
+    font-size: 16px;
+}
+
+.rocket {
+    position: absolute;
+    bottom: 12.69px;
+    right: 16px;
+    height: 29px;
+    font-family: "Bold";
+    font-size: 24px;
+}

@@ -1,3 +1,11 @@
+declare interface Context {
+    appState: State
+    dispatchApp?: func
+    handleScroll?: func
+    resetApp?: func
+    setState?: func
+}
+
 declare interface Launch {
     date_unix: number
     flight_number: number
