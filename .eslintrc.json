@@ -20,7 +20,8 @@
     ],
     "rules": {
         "no-extra-parens": ["error", "all", { "ignoreJSX": "multi-line" }],
-        "no-undef": "off"
+        "no-undef": "off",
+        "one-var": ["error", { "const": "never" }]
     },
     "settings": {
         "react": {
